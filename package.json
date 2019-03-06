@@ -1,8 +1,8 @@
 {
-  "name": "demo-app",
+  "name": "one-demo-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://one.lgk.io/demo-app",
+  "homepage": "https://lgkonline.github.io/one-demo-app",
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
