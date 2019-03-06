@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-rgb: 250, 200, 161;
+    --primary: rgb(var(--primary-rgb));
+    --primary-transparent: rgba(var(--primary-rgb), .3);
+
+    --dark-rgb: 25, 25, 25;
+    --dark: rgb(var(--dark-rgb));
+    --dark-transparent: rgba(var(--dark-rgb), .3);
+
+    --light: white;
+
+    --front: var(--dark-rgb);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 24px;
+    color: var(--front);
+}
+
+input,
+textarea,
+button {
+    font: inherit;
+    color: inherit;
+}
+
+/* Utilities */
+.bg-dark {
+    --bg: var(--dark);
+}
+
+.bg-primary {
+    --bg: var(--primary);
+}
+
+.bg {
+    background-color: var(--bg);
+}
+
+.text-light {
+    color: var(--light);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-block {
+    display: block;
+}
+
+/* Spacing */
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.py-5,
+.pt-5 {
+    padding-top: 3rem;
+}
+
+.py-5,
+.pb-5 {
+    padding-bottom: 3rem;
+}
+
+/* Components */
+.slide::before,
+.slide::after,
+.container::before,
+.container::after {
+    content: "";
+    display: table;
+}
+
+.slide {
+    min-height: 100vh;
+}
+
+.container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0 calc(50% - 36rem);
+}
+
+.btn,
+.form-control {
+    padding: .5rem 1rem;
+}
+
+.btn {
+    --rgb: var(--primary-rgb);
+
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(var(--rgb), .3);
+    color: rgb(var(--rgb));
+    margin-bottom: 5px;
+    border-radius: 3px;
+    transition: background-color .2s;
+}
+.btn:hover {
+    color: var(--bg);
+    background-color: rgb(var(--rgb));
+}
+
+.btn-dark {
+    --rgb: var(--dark-rgb);
+    --front: var(--bg);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    border: 1px solid;
+}
+
+.lg {
+    padding: .8rem 1.5rem;
+}
+
+.blink:hover {
+    animation: blink infinite 3s ease-in;
+}
+
+@keyframes blink {
+    0%, 100% {
+        background-color: #fac8a1;
+    }
+    33% {
+        background-color: #308cc8;
+    }
+    77% {
+        background-color: #FFA500;
+    }
+}
